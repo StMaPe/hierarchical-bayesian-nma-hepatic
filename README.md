@@ -34,6 +34,15 @@ computes SUCRA rankings, and produces league tables and network plots. All effec
 
 The JAGS model fits a likelihood for each observed contrast taking the reported within-study variance (vi) as known, and models two sources of heterogeneity via random effects: a study-level random effect and a database/registry-level random effect. This structure accounts for clustering of contrasts within studies and clustering of studies within the same registry.
 
+#Mathematically
+
+- Observed contrast: \(y_i \sim N(\theta_i, v_i)\)
+- True contrast: \(\theta_i = d_{t1[i]} - d_{t2[i]} + s_{study[i]} + u_{db[i]}\)
+- Study-level random effect: \(s_j \sim N(0, \tau_{study}^2)\)
+- Database-level random effect: \(u_k \sim N(0, \tau_{db}^2)\)
+
+Where `d[t]` are the basic treatment effects (fixed-effects parameters) and one treatment is chosen as reference.
+
 # Citation
 
 Please cite the final paper when using this code. If you re-use the code in derivative analyses, consider linking back to this repository.
