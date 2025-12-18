@@ -1,0 +1,18 @@
+model {
+  for(i in 1:N) {
+    yi[i] ~ dnorm(theta[i], prec_y[i])
+    prec_y[i] <- 1 / vi[i]
+    theta[i] <- d[t1[i]] - d[t2[i]] + u[db[i]] + s[study[i]]
+  }
+
+  for(k in 1:K) { u[k] ~ dnorm(0, prec_db) }
+  for(j in 1:S) { s[j] ~ dnorm(0, prec_study) }
+
+  d[1] <- 0
+  for(t in 2:T) { d[t] ~ dnorm(0.0, 1.0E-4) }
+
+  tau_db ~ dunif(0, 5)
+  prec_db <- 1 / (tau_db * tau_db)
+  tau_study ~ dunif(0, 5)
+  prec_study <- 1 / (tau_study * tau_study)
+}
