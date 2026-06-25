@@ -35,3 +35,5 @@ The JAGS model fits a likelihood for each observed contrast taking the reported 
 # Citation
 
 Please cite the final paper when using this code. If you re-use the code in derivative analyses, consider linking back to this repository.
+
+Passos PRC, Motta R, Oliveira Costa Filho V, Noronha MM, Venâncio RC, Grossi Lopes Cançado G, Adler A, Cobbold JF, Tomlinson JW. Hepatic Events Prevention by Antihyperglycemic Therapies and Intervention Comparisons in Type 2 Diabetes: The HEPATIC-T2DM Network Meta-analysis. Diabetes Care. 2026 Jun 1;49(6):1144-1153. doi: 10.2337/dc26-0336. PMID: 41973508.
